@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
+
 def getAWS():
     url = 'https://aws.amazon.com/start-ups/loft/ny-loft/'
     r = requests.get(url)
@@ -22,3 +23,5 @@ def getAWS():
         event_info.append([date, title, link])
 
     return event_info
+
+print(getAWS())
