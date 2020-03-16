@@ -17,6 +17,7 @@ from content_detection.imagesave import imageSaver
 from  content_detection.s3upload import s3upload
 from liquipediascrape import getGameEvents
 from joke import get_joke
+from recognize_speech_from_mic import recognize_speech_from_mic
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
