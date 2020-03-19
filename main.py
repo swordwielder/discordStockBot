@@ -250,6 +250,8 @@ async def on_message(message):
         embed.add_field(name="```!games [game]```", value='Lists the upcoming matches (starcraft2,overwatch,pubg,dota2,etc.) ', inline=False)
         embed.add_field(name="```!awsloft```", value='Lists the schedule for AWS loft located in lower Manhattan ', inline=False)
         embed.add_field(name="```!recognize [Image Url]```", value='Uses Machine Learning to Detect Objects in Image', inline=False)
+        embed.add_field(name="```!repeat```", value='Say something for the bot to repeat!', inline=False)
+        embed.add_field(name="```!math```", value='Calculates basic math equations', inline=False)
         embed.add_field(name="```!help```", value='A manual for all of the bot functions ', inline=False)
         await message.channel.send(embed=embed)
 
