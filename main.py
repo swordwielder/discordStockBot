@@ -17,7 +17,8 @@ from content_detection.imagesave import imageSaver
 from  content_detection.s3upload import s3upload
 from liquipediascrape import getGameEvents
 from joke import get_joke
-from recognize_speech_from_mic import recognize_speech_from_mic
+from speechToEval import recognize_speech_from_mic, calculate
+from tts import repeat, speak
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -68,6 +69,22 @@ async def on_message(message):
         embed.set_image(url=f'https://discordimage.s3.amazonaws.com/{rando_img_name}.jpg')
         await message.channel.send(embed=embed)
 
+    if '!math' in message.content:
+        channel = message.channel
+        instructions = (
+        "\nPlease say a sentence to evaluate in this format \n"
+        "Example: 2 + 2 * 2 -> two plus two times two \n"
+        )
+        await channel.send(instructions)
+
+        await channel.send(calculate())
+
+
+    if '!repeat' in message.content:
+        channel = message.channel
+        await channel.send('Please say the message you want the bot to repeat!')
+        await channel.send(repeat())
+
     if '!games' in message.content:
         esport = message.content.split(' ')[1]
         try:
@@ -104,25 +121,30 @@ async def on_message(message):
                 await message.channel.send(':weary: I got this next time! ')
 
     if '!awsloft' in message.content:
+        channel = message.channel
         upcoming_schedule = getAWS()
         first= upcoming_schedule[0][0].split('|')[0]
         last=upcoming_schedule[len(upcoming_schedule)-1][0].split('|')[0]
-        embed = discord.Embed(title="Upcoming AWS Schedule", description=f'{first}-{last} | [Link](<https://aws.amazon.com/start-ups/loft/ny-loft/>)')
-        count=1
-        spacer='----------------------------------------------------------------------------'
-        embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
-        for event in upcoming_schedule:
-            date=event[0]
-            title=event[1].split(':')[0]
-            link=event[2]
-            linktag=f' | [Event](<{link}>)'
-            if link == '':
-                linktag=''
-            embed.add_field(name=f'{date}', value=f'{title}{linktag}', inline=True)
-            if ('Friday' in date.split('|')[1] and count<4):
-                count+=1
-                embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
-        await message.channel.send(embed=embed)
+        if len(first)>1 and len(last):
+            embed = discord.Embed(title="Upcoming AWS Schedule", description=f'{first}-{last} | [Link](<https://aws.amazon.com/start-ups/loft/ny-loft/>)')
+            count=1
+            spacer='----------------------------------------------------------------------------'
+            embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
+            for event in upcoming_schedule:
+                date=event[0]
+                title=event[1].split(':')[0]
+                link=event[2]
+                linktag=f' | [Event](<{link}>)'
+                if link == '':
+                    linktag=''
+                embed.add_field(name=f'{date}', value=f'{title}{linktag}', inline=True)
+                if ('Friday' in date.split('|')[1] and count<4):
+                    count+=1
+                    embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
+            await message.channel.send(embed=embed)
+        else:
+            await channel.send('No Schedule found!')
+        
 
     if '$findstock' in message.content:
         # Remove whitespaces from input for exception handling

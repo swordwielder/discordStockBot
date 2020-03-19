@@ -32,12 +32,12 @@ def recognize_speech_from_mic(recognizer, microphone):
     return response
 
 
-if __name__ == "__main__":
+def calculate():
     recognizer = sr.Recognizer()
     microphone = sr.Microphone()
     PROMPT_LIMIT = 3
     instructions = (
-        "Please say a sentence \n"
+        "\nPlease say a sentence \n"
         "To Evaluate in this format \n"
         "Example: 3 + 4 or 4 * 6 \n"
     )
@@ -61,8 +61,7 @@ if __name__ == "__main__":
         print("You said: {}".format(guess["transcription"]))
         res=str(guess["transcription"])
         try:
-            print('Answer: '+str(eval(res)))
-            break
+            return ("You said: {}".format(guess["transcription"]) + '\nAnswer: '+str(eval(res)))
+            
         except:
-            print('Error! Not Evaluable')
-            print(instructions)
+            return ('Error! Not Evaluable' + instructions)
