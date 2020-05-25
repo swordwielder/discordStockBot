@@ -41,8 +41,11 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
     for guild in client.guilds:
         members = '\n - '.join([member.name for member in guild.members])
+        print('\nTOTAL NUMBER OF USERS IS IN THIS DISCORD\n')
+        print(len(guild.members))
         print(guild.name, guild.id)
         print(f'Guild Members:\n - {members}')
+        
 
 @client.event
 async def on_member_join(member):
@@ -71,13 +74,14 @@ async def on_message(message):
 
     if '!math' in message.content:
         channel = message.channel
+        equation = message.content.replace(' ','')[5:]
         instructions = (
-        "\nPlease say a sentence to evaluate in this format \n"
-        "Example: 2 + 2 * 2 -> two plus two times two \n"
+        "\nThe answer for " + equation + ":\n"
         )
         await channel.send(instructions)
 
-        await channel.send(calculate())
+        await channel.send(eval(equation))
+        # await channel.send(calculate())
 
 
     if '!repeat' in message.content:
@@ -250,9 +254,10 @@ async def on_message(message):
         embed.add_field(name="```!games [game]```", value='Lists the upcoming matches (starcraft2,overwatch,pubg,dota2,etc.) ', inline=False)
         embed.add_field(name="```!awsloft```", value='Lists the schedule for AWS loft located in lower Manhattan ', inline=False)
         embed.add_field(name="```!recognize [Image Url]```", value='Uses Machine Learning to Detect Objects in Image', inline=False)
-        embed.add_field(name="```!repeat```", value='Say something for the bot to repeat!', inline=False)
-        embed.add_field(name="```!math```", value='Calculates basic math equations', inline=False)
+        # embed.add_field(name="```!repeat```", value='Say something for the bot to repeat!', inline=False)
+        embed.add_field(name="```!math```", value='Calculates basic math equations ex: !math 2+2*2', inline=False)
         embed.add_field(name="```!help```", value='A manual for all of the bot functions ', inline=False)
+        embed.add_field(name="```note from devs```", value='currently making a better discord checkout: https://anychatio.herokuapp.com/ for early access', inline=False)
         await message.channel.send(embed=embed)
 
     if message.content=='!weather':
