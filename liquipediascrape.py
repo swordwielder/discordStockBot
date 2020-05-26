@@ -14,7 +14,7 @@ def getGameEvents(esport):
     home= 'https://liquipedia.net'
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'lxml')
-    upcoming_matches = soup.findAll(class_='table table-striped infobox_matches_content')
+    upcoming_matches = soup.find_all(class_='table table-striped infobox_matches_content')
     upcoming=False
     count=0
     matchups = []
