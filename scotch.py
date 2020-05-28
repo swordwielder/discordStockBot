@@ -7,28 +7,65 @@ import selenium as se
 import lxml
 from lxml import html
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 import time
 
 
 def sams():
+    options = Options()
+    options.headless = True
+    
     browser = webdriver.Chrome(ChromeDriverManager().install())
     # browser=webdriver.Chrome()
+    browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
+                                        "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
+                                        "success(position);}")
+
+    
     url = "https://www.samsclub.com/s/johnnie%20walker"
     browser.get(url) #navigate to the page
-    time.sleep(2)
+    time.sleep(3)
     innerHTML = browser.execute_script("return document.body.innerHTML")
 
     return innerHTML
 
 def bevmolink():
+    # driver.findElement(locator).isEnabled()
+    # driver.findElement(locator).isDisplayed()
+    # driver.manage().timeouts().implicitlyWait(number_of_seconds, TimeUnit.SECONDS)
+
     browser = webdriver.Chrome(ChromeDriverManager().install())
     #browser = webdriver.Chrome()
     locator = 'fp-item-sale-price'
+    browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
+                                        "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
+                                        "success(position);}")
+
+    # print(driver.execute_script("var positionStr=\"\";"+
+    #                                 "window.navigator.geolocation.getCurrentPosition(function(pos){positionStr=pos.coords.latitude+\":\"+pos.coords.longitude});"+
+    #                                 "return positionStr;"))
+    
     url = "https://www.bevmo.com/shop#!/?q=scotch"
     browser.get(url) #navigate to the page
     time.sleep(3)
     innerHTML = browser.execute_script("return document.body.innerHTML")
 
+    return innerHTML
+
+def totalwinelink():
+
+    browser = webdriver.Chrome(ChromeDriverManager().install())
+    #browser = webdriver.Chrome()
+    locator = 'fp-item-sale-price'
+    browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
+                                        "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
+                                        "success(position);}")
+    url = "https://www.bevmo.com/shop#!/?q=scotch"
+    url = "https://www.totalwine.com/search/all?text=johnnie%20walker%20black"
+    browser.get(url) #navigate to the page
+    time.sleep(3)
+    innerHTML = browser.find_elements_by_class_name("grid__1eZnNfL-")
+    # innerHTML = browser.get_attribute("innerHTML")
     return innerHTML
 
 # warnings.filterwarnings('ignore')
@@ -123,5 +160,10 @@ def search(q,choice):
 # result = search('johnnie walker black','sams')
 # print(result)
 
-
-print(sams())
+a = totalwinelink()
+for element in a:
+    print (element.text)
+    print (element.tag_name)
+    print (element.parent)
+    print (element.location)
+    print (element.size)
