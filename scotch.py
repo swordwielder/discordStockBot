@@ -4,12 +4,39 @@ import json
 from selenium import webdriver
 import warnings
 import selenium as se
+import lxml
+from lxml import html
+from webdriver_manager.chrome import ChromeDriverManager
+import time
+
+
+def sams():
+    browser = webdriver.Chrome(ChromeDriverManager().install())
+    # browser=webdriver.Chrome()
+    url = "https://www.samsclub.com/s/johnnie%20walker"
+    browser.get(url) #navigate to the page
+    time.sleep(2)
+    innerHTML = browser.execute_script("return document.body.innerHTML")
+
+    return innerHTML
+
+def bevmolink():
+    browser = webdriver.Chrome(ChromeDriverManager().install())
+    #browser = webdriver.Chrome()
+    locator = 'fp-item-sale-price'
+    url = "https://www.bevmo.com/shop#!/?q=scotch"
+    browser.get(url) #navigate to the page
+    time.sleep(3)
+    innerHTML = browser.execute_script("return document.body.innerHTML")
+
+    return innerHTML
 
 # warnings.filterwarnings('ignore')
 
 
 bevmoUrl = 'https://www.bevmo.com/shop#!/?q=scotch&filter=include_out_of_stock'
 totalWineUrl = 'https://www.totalwine.com/search/all?text=johnnie%20walker%20black'  
+samsClubUrl = 'https://www.samsclub.com/s/johnnie%20walker%20black'
 
 bevmo = requests.get(bevmoUrl)
 totalWine = requests.get(totalWineUrl)
@@ -39,44 +66,62 @@ def search(q,choice):
     s = requests.Session()
     q = '%20'.join(q.split())
     url = ''
-    browser = webdriver.PhantomJS()
+    #.PhantomJS()
+    # browser = webdriver.Firefox(desired_capabilities={'firefox.page.settings.resourceTimeout': '3000'})
+    # soup = BeautifulSoup(html, 'lxml')
 
-    chrome_options = se.webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless')
-    driver = webdriver.Chrome(chrome_options=chrome_options)
+    # chrome_options = se.webdriver.ChromeOptions()
+    # print('chrome options:')
+    # print(chrome_options)
+    # chrome_options.add_argument('--headless')
+    # driver = webdriver.Chrome(chrome_options=chrome_options)
     #'chromedriver',
     if choice == 'bevmo':
         url = 'https://www.bevmo.com/shop#!/?q='+ q +'&filter=include_out_of_stock'
-    else:
+    elif choice =='totalwine':
         url = 'https://www.totalwine.com/search/all?text=' + q
+    else:
+        url = 'https://www.samsclub.com/s/' + q
+        new = 'sc-infinite-loader sc-product-cards analytics'
     print('The url is:')
     print(url)
-    req = driver.get(url)
-    print(req)
+    # req = driver.get(url)
+    # print('request for driver is:')
+    # print(req)
     
-    r = s.get(url, headers=headers)
-    browser.get(url)
-    html = browser.page_source
+    # r = s.get(url, headers=headers)
+    # browser.get(url)
+    # html = browser.page_source
+    # print('HTML for browser page source:')
+    # print(html)
     
-    soup = BeautifulSoup(html, 'lxml')
 
     # soup = BeautifulSoup(r.text , "html.parser")
-    
-    
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, 'lxml')
+    print('soup is:')
+    # print(soup.prettify())
     output = []
     # print(soup)
     
-    res = soup.findAll("div", {"class": 'fp-item-container'})
+    res = soup.findAll("div", {"class": 'sc-product-cards-wrapper'})
 
     # for result in soup.findAll("div", {"class": 'fp-item-container'}):
     #     print(result)
+    
     output.append(res)
+    
+    print('SKIP')
     return output
 
-print('\nTotal Wine')
+# print('\nTotal Wine')
 # print(totalWineContent)
 
 # print(bevmoContent)
 # for i in bevmoContent:
-print('\nBevmo')
-print(search('johnnie','bevmo'))
+# print('\nBevmo')
+# result = search('johnnie walker black','sams')
+# print(result)
+
+
+print(sams())
