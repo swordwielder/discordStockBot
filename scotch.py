@@ -20,7 +20,6 @@ def sams():
     browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
                                         "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
                                         "success(position);}")
-
     
     url = "https://www.samsclub.com/s/johnnie%20walker"
     browser.get(url) #navigate to the page
@@ -50,33 +49,51 @@ def bevmolink():
     time.sleep(3)
     innerHTML = browser.execute_script("return document.body.innerHTML")
 
+    # locator = 'fp-item-sale-price'
     return innerHTML
 
-def totalwinelink():
+def totalwinelink(search):
+    q = '%20'.join(search.split())
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
 
-    browser = webdriver.Chrome(ChromeDriverManager().install())
+    browser = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
     #browser = webdriver.Chrome()
-    locator = 'fp-item-sale-price'
     browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
                                         "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
                                         "success(position);}")
-    url = "https://www.bevmo.com/shop#!/?q=scotch"
-    url = "https://www.totalwine.com/search/all?text=johnnie%20walker%20black"
+    
+    url = "https://www.totalwine.com/search/all?text="+ q
     browser.get(url) #navigate to the page
-    time.sleep(3)
+    time.sleep(1)
     innerHTML = browser.find_elements_by_class_name("grid__1eZnNfL-")
     # innerHTML = browser.get_attribute("innerHTML")
-    return innerHTML
+    toreturn = []
+    for element in innerHTML:
+        b = element.text.split('\n')
+        
+        for i in range(len(b)):
+            print (b[i])
+
+            # toreturn.append(b[i])
+            if b[i] != '90' and b[i] !='Pick Up In Stock' and b[i] != 'Delivery Unavailable' and b[i] != 'Add to Cart':
+                toreturn.append(b[i])
+            if len(toreturn)>=5:
+                break
+    return toreturn
+
 
 # warnings.filterwarnings('ignore')
 
 
-bevmoUrl = 'https://www.bevmo.com/shop#!/?q=scotch&filter=include_out_of_stock'
-totalWineUrl = 'https://www.totalwine.com/search/all?text=johnnie%20walker%20black'  
-samsClubUrl = 'https://www.samsclub.com/s/johnnie%20walker%20black'
+# bevmoUrl = 'https://www.bevmo.com/shop#!/?q=scotch&filter=include_out_of_stock'
+# totalWineUrl = 'https://www.totalwine.com/search/all?text=johnnie%20walker%20black'  
+# samsClubUrl = 'https://www.samsclub.com/s/johnnie%20walker%20black'
 
-bevmo = requests.get(bevmoUrl)
-totalWine = requests.get(totalWineUrl)
+# bevmo = requests.get(bevmoUrl)
+# totalWine = requests.get(totalWineUrl)
 
 # bevmoSoup = BeautifulSoup(bevmo.text, 'html.parser')
 # twineSoup = BeautifulSoup(totalWine.content,'html.parser')
@@ -160,10 +177,6 @@ def search(q,choice):
 # result = search('johnnie walker black','sams')
 # print(result)
 
-a = totalwinelink()
-for element in a:
-    print (element.text)
-    print (element.tag_name)
-    print (element.parent)
-    print (element.location)
-    print (element.size)
+a = totalwinelink('highland bird blended')
+
+print(a)

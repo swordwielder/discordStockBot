@@ -19,6 +19,9 @@ from liquipediascrape import getGameEvents
 from joke import get_joke
 from speechToEval import recognize_speech_from_mic, calculate
 from tts import repeat, speak
+from scotch import totalwinelink
+
+
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -123,6 +126,28 @@ async def on_message(message):
                 await message.channel.send(':stuck_out_tongue_closed_eyes: That was a good one, That was a good one.  I\'ll keep it up')
             elif reaction.emoji== '👎':
                 await message.channel.send(':weary: I got this next time! ')
+
+    if '!wine' in message.content:
+        
+        channel = message.channel
+        scotch = message.content[5:]
+        
+        result = totalwinelink(scotch)
+        if result:
+            embed = discord.Embed(title="TotalWine", description='Here are the TotalWine result:', color=0x00ff00)
+            embed.add_field(name="```Name```", value=result[0], inline=False)
+            embed.add_field(name="```Quantity```", value=result[1], inline=False)
+            embed.add_field(name="```Rating```", value=result[2], inline=False)
+            embed.add_field(name="```Reviews```", value=result[3], inline=False)
+            embed.add_field(name="```Price```", value=result[4], inline=False)
+            # embed.add_field(name="```Name```", value=result[5], inline=False)
+            # embed.add_field(name="```Quantity```", value=result[6], inline=False)
+            # embed.add_field(name="```Rating```", value=result[7], inline=False)
+            # embed.add_field(name="```Reviews```", value=result[8], inline=False)
+            # embed.add_field(name="```Price```", value=result[9], inline=False)
+            await message.channel.send(embed=embed)
+        else:
+            await message.channel.send('No Result Found!')
 
     if '!awsloft' in message.content:
         channel = message.channel
@@ -256,8 +281,9 @@ async def on_message(message):
         embed.add_field(name="```!recognize [Image Url]```", value='Uses Machine Learning to Detect Objects in Image', inline=False)
         # embed.add_field(name="```!repeat```", value='Say something for the bot to repeat!', inline=False)
         embed.add_field(name="```!math```", value='Calculates basic math equations ex: !math 2+2*2', inline=False)
+        embed.add_field(name="```!wine [name]```", value='scrapes the total wine website data for stats on a wine', inline=False)
         embed.add_field(name="```!help```", value='A manual for all of the bot functions ', inline=False)
-        embed.add_field(name="```note from devs```", value='currently making a better discord checkout: https://anychatio.herokuapp.com/ for early access', inline=False)
+        embed.add_field(name="```note from devs```", value='currently making a better discord checkout: https://anychatio.herokuapp.com/ for early access, for questions and concerns, email anychatio@gmail.com', inline=False)
         await message.channel.send(embed=embed)
 
     if message.content=='!weather':
