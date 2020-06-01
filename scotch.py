@@ -8,6 +8,7 @@ import lxml
 from lxml import html
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from pyvirtualdisplay import Display
 import time
 
 
@@ -34,7 +35,7 @@ def bevmolink():
     # driver.manage().timeouts().implicitlyWait(number_of_seconds, TimeUnit.SECONDS)
 
     browser = webdriver.Chrome(ChromeDriverManager().install())
-    #browser = webdriver.Chrome()
+    #browser = webdriver.Chrome(ChromeDriverManager().install())
     locator = 'fp-item-sale-price'
     browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
                                         "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
@@ -54,12 +55,15 @@ def bevmolink():
 
 def totalwinelink(search):
     q = '%20'.join(search.split())
+    display = Display(visible=0, size=(800, 800))  
+    display.start()
     #chrome_options = Options()
     #chrome_options.add_argument('--headless')
     #chrome_options.add_argument('--no-sandbox')
     #chrome_options.add_argument('--disable-dev-shm-usage')
-
-    browser = webdriver.Chrome(ChromeDriverManager().install())
+    
+    browser = webdriver.Chrome()
+    # browser = webdriver.Chrome(ChromeDriverManager().install())
     #browser = webdriver.Chrome()
     browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
                                         "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+

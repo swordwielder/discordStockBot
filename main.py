@@ -152,8 +152,8 @@ async def on_message(message):
     if '!awsloft' in message.content:
         channel = message.channel
         upcoming_schedule = getAWS()
-        print('the schedule:')
         if (upcoming_schedule):
+            print(upcoming_schedule)
             first= upcoming_schedule[0][0].split('|')[0]
             last=upcoming_schedule[len(upcoming_schedule)-1][0].split('|')[0]
             if len(first)>1 and len(last):
