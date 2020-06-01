@@ -152,25 +152,27 @@ async def on_message(message):
     if '!awsloft' in message.content:
         channel = message.channel
         upcoming_schedule = getAWS()
-        first= upcoming_schedule[0][0].split('|')[0]
-        last=upcoming_schedule[len(upcoming_schedule)-1][0].split('|')[0]
-        if len(first)>1 and len(last):
-            embed = discord.Embed(title="Upcoming AWS Schedule", description=f'{first}-{last} | [Link](<https://aws.amazon.com/start-ups/loft/ny-loft/>)')
-            count=1
-            spacer='----------------------------------------------------------------------------'
-            embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
-            for event in upcoming_schedule:
-                date=event[0]
-                title=event[1].split(':')[0]
-                link=event[2]
-                linktag=f' | [Event](<{link}>)'
-                if link == '':
-                    linktag=''
-                embed.add_field(name=f'{date}', value=f'{title}{linktag}', inline=True)
-                if ('Friday' in date.split('|')[1] and count<4):
-                    count+=1
-                    embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
-            await message.channel.send(embed=embed)
+        print('the schedule:')
+        if (upcoming_schedule):
+            first= upcoming_schedule[0][0].split('|')[0]
+            last=upcoming_schedule[len(upcoming_schedule)-1][0].split('|')[0]
+            if len(first)>1 and len(last):
+                embed = discord.Embed(title="Upcoming AWS Schedule", description=f'{first}-{last} | [Link](<https://aws.amazon.com/start-ups/loft/ny-loft/>)')
+                count=1
+                spacer='----------------------------------------------------------------------------'
+                embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
+                for event in upcoming_schedule:
+                    date=event[0]
+                    title=event[1].split(':')[0]
+                    link=event[2]
+                    linktag=f' | [Event](<{link}>)'
+                    if link == '':
+                        linktag=''
+                    embed.add_field(name=f'{date}', value=f'{title}{linktag}', inline=True)
+                    if ('Friday' in date.split('|')[1] and count<4):
+                        count+=1
+                        embed.add_field(name=f'{spacer}\nWeek #{count}', value=f'**{spacer}---**', inline=False)
+                await message.channel.send(embed=embed)
         else:
             await channel.send('No Schedule found!')
         

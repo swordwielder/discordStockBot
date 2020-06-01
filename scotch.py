@@ -54,12 +54,12 @@ def bevmolink():
 
 def totalwinelink(search):
     q = '%20'.join(search.split())
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
+    #chrome_options = Options()
+    #chrome_options.add_argument('--headless')
+    #chrome_options.add_argument('--no-sandbox')
+    #chrome_options.add_argument('--disable-dev-shm-usage')
 
-    browser = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
+    browser = webdriver.Chrome(ChromeDriverManager().install())
     #browser = webdriver.Chrome()
     browser.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){"+
                                         "var position = {\"coords\" : {\"latitude\": \"33.735021\",\"longitude\": \"-112.181337\"}};"+
@@ -177,6 +177,6 @@ def search(q,choice):
 # result = search('johnnie walker black','sams')
 # print(result)
 
-a = totalwinelink('highland bird blended')
+# a = totalwinelink('highland bird blended')
 
-print(a)
+# print(a)
