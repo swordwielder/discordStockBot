@@ -9,7 +9,6 @@ def get_joke():
     headers = {
         'x-rapidapi-key': os.getenv('XRAPID_KEY')
         }
-
     response = request('GET', url, headers=headers)
     json_data = json.loads(response.text)
     return json_data['content']
