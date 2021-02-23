@@ -20,7 +20,7 @@ from joke import get_joke
 from speechToEval import recognize_speech_from_mic, calculate
 from tts import repeat, speak
 from scotch import totalwinelink
-
+from Generate_Games import gambit
 
 
 load_dotenv()
@@ -105,6 +105,13 @@ async def on_message(message):
             embed.add_field(name=f"({matchup['time']})", value=f'```{matchup["status"]}```', inline=True)
             embed.add_field(name="Team 2", value=f'```{matchup["team_right"]}```', inline=True)
 
+        await message.channel.send(embed=embed)
+
+    if '!gambit' in message.content:
+        gambitGames = gambit()
+        embed = discord.Embed(title="Games today", description='Here are the Games today on Gambit', color=0x00ff00)
+        for i in gambitGames:
+            embed.add_field(name="test",value=i, inline=True)
         await message.channel.send(embed=embed)
 
     if '!joke' in message.content:
@@ -285,6 +292,7 @@ async def on_message(message):
         embed.add_field(name="```!math```", value='Calculates basic math equations ex: !math 2+2*2', inline=False)
         embed.add_field(name="```!wine [name]```", value='scrapes the total wine website data for stats on a wine', inline=False)
         embed.add_field(name="```!help```", value='A manual for all of the bot functions ', inline=False)
+        embed.add_field(name="```Invite the bot```", value='https://discord.com/api/oauth2/authorize?client_id=623200683964891136&permissions=271973456&scope=bot', inline=False)
         embed.add_field(name="```note from devs```", value='currently making a better discord checkout: https://anychatio.herokuapp.com/ for early access, for questions and concerns, email anychatio@gmail.com', inline=False)
         await message.channel.send(embed=embed)
 
