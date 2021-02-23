@@ -109,10 +109,11 @@ async def on_message(message):
 
     if '!gambit' in message.content:
         gambitGames = gambit()
-        embed = discord.Embed(title="Games today", description='Here are the Games today on Gambit', color=0x00ff00)
+        # embed = discord.Embed(title="Games today", description='Here are the Games today on Gambit', color=0x00ff00)
+        # await message.channel.send(embed=embed)
         for i in gambitGames:
-            embed.add_field(name="test",value=i, inline=True)
-        await message.channel.send(embed=embed)
+            await message.channel.send(i)
+        # await message.channel.send(embed=embed)
 
     if '!joke' in message.content:
         joke=get_joke()
