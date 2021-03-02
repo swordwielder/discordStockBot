@@ -21,7 +21,7 @@ from speechToEval import recognize_speech_from_mic, calculate
 from tts import repeat, speak
 from scotch import totalwinelink
 from Generate_Games import gambit
-
+from listcrypto import getTopCrypto
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -248,33 +248,39 @@ async def on_message(message):
 
     #Lists the crypto currencies
     if '!listcrypto' in message.content:
-        loop = message.content.replace(' ', '')[11:]
-        info = f'https://api.nomics.com/v1/currencies/ticker?key={CRYPTO_NOMICS_TOKEN}&interval=1d,30d&convert=USD&include-transparency=false'
-        response = requests.get(info)
-        data = response.text
-        json_data = json.loads(data)
-        count = 1
+        # loop = message.content.replace(' ', '')[11:]
+        
+        info = getTopCrypto()
+        
+        # response = requests.get(info)
+        # print('reponse')
+        # print(response)
+        # data = response.text
+        # json_data = json.loads(data)
+        # count = 1
         #embed = discord.Embed(title="Crypto Currency List", color=0x00ff00)
         #await message.channel.send(embed=embed)
         await message.channel.send('Top Crypto Currency List')
-        new=3
-        activate=True
-        if loop:
-            if loop.isnumeric():
-                new = int(loop)
-            else:
-                activate=False
-        if activate:
-            #await message.channel.send('Symbol')
-            for currency in json_data:
-                #print(currency['currency'], currency['name'])
-                #embed.add_field(name="Symbol", value=f'{currency["currency"]}', inline=True)
-                #embed.add_field(name="Name", value=f'{currency["name"]}', inline=False)
-                await message.channel.send(str(count)+". " + f'{currency["currency"]}\t{currency["name"]}')
+        for i in info:
+            await message.channel.send(i)
+        # new=3
+        # activate=True
+        # if loop:
+        #     if loop.isnumeric():
+        #         new = int(loop)
+        #     else:
+        #         activate=False
+        # if activate:
+        #     #await message.channel.send('Symbol')
+        #     for currency in json_data:
+        #         #print(currency['currency'], currency['name'])
+        #         #embed.add_field(name="Symbol", value=f'{currency["currency"]}', inline=True)
+        #         #embed.add_field(name="Name", value=f'{currency["name"]}', inline=False)
+        #         await message.channel.send(str(count)+". " + f'{currency["currency"]}\t{currency["name"]}')
 
-                if count == new:
-                    break
-                count += 1
+        #         if count == new:
+        #             break
+        #         count += 1
 
     #Lists all the commands for the bot
     if message.content == '!help':
@@ -285,7 +291,7 @@ async def on_message(message):
         embed.add_field(name="```!joke```", value='Tells a joke', inline=False)
         embed.add_field(name="```!weather```", value='Tells the 5 days forecast of NYC', inline=False)
         embed.add_field(name="```!listcrypto```", value='Lists the top 3 Crypto Currencies ', inline=False)
-        embed.add_field(name="```!listcrypto [Number]```", value='Lists the top [Number] Crypto Currencies ', inline=False)
+        # embed.add_field(name="```!listcrypto [Number]```", value='Lists the top [Number] Crypto Currencies ', inline=False)
         embed.add_field(name="```!games [game]```", value='Lists the upcoming matches (starcraft2,overwatch,pubg,dota2,etc.) ', inline=False)
         embed.add_field(name="```!awsloft```", value='Lists the schedule for AWS loft located in lower Manhattan ', inline=False)
         embed.add_field(name="```!recognize [Image Url]```", value='Uses Machine Learning to Detect Objects in Image', inline=False)
