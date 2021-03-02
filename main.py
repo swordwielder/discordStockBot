@@ -117,7 +117,7 @@ async def on_message(message):
 
     if '!joke' in message.content:
         joke=get_joke()
-        await message.channel.send(f'If you insist {str(message.author)[:-5]}...\n{joke} :smirk: \n\n give me a 👍 or 👎 to let me know how I did')
+        await message.channel.send(f'If you insist {str(message.author)[:-5]}... :smirk: \n{joke}  \n\n give me a 👍 or 👎 to let me know how I did')
 
         def check(reaction, user):
             if reaction.emoji=='👍':

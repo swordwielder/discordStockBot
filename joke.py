@@ -9,7 +9,14 @@ def get_joke():
     headers = {
         'x-rapidapi-key': os.getenv('XRAPID_KEY')
         }
+    print('The header')
+    print(headers)
     response = request('GET', url, headers=headers)
-    json_data = json.loads(response.text)
-    return json_data['content']
+    
+    try:
+        json_data = json.loads(response.text)
+    
+        return json_data['content'] 
+    except:
+        return 'Something happened to the joke Database! :scream:'
 
