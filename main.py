@@ -22,6 +22,7 @@ from tts import repeat, speak
 from scotch import totalwinelink
 from Generate_Games import gambit
 from listcrypto import getTopCrypto
+from listcrypto import getCryptoPrice
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -222,29 +223,45 @@ async def on_message(message):
     if '$findcrypto' in message.content:
         cryptosymbol = message.content.replace(' ', '')[11:]
         symbol = cryptosymbol.upper()
-        cryptoinfo = getCryptoData(symbol)
-        name = cryptoinfo['name']
-        rank = cryptoinfo['rank']
-        # Pulls logo from online source with PNG because SVG is not compatible
-        icon = f'https://coincodex.com/en/resources/images/admin/coins/{name}.png'
+        try:
+            info = f'https://api.nomics.com/v1/prices?key={CRYPTO_NOMICS_TOKEN}&format=json'
+            response = requests.get(info)
+            
+            data = response.text
+            json_data = json.loads(data)
+            
+            
+            price = (str('$'+next(item['price'][:-6] for item in json_data if item["currency"] == symbol)))
+            print(symbol)
+            print('the price is;')
+            print(price)
+            # return price
+            # cryptoprice = getCryptoPrice(symbol)
+            # name = cryptoinfo['name']
+            # rank = cryptoinfo['rank']
+            # Pulls logo from online source with PNG because SVG is not compatible
+            # icon = f'https://coincodex.com/en/resources/images/admin/coins/{name}.png'
 
-        time = cryptoinfo['price_date']
+            # time = cryptoinfo['price_date']
 
-        # alter decimal based on price
-        decimalcount=2
-        if float(cryptoinfo['price']) < 1:
-            decimalcount = 6
+            # alter decimal based on price
+            # decimalcount=2
+            # if float(cryptoinfo['price']) < 1:
+            #     decimalcount = 6
 
-        price = round(float(cryptoinfo['price']), decimalcount)
-        price_change = round(float(cryptoinfo['1d']['price_change']),decimalcount)
-        percent_change = round(float(cryptoinfo['1d']['price_change_pct'])*100,2)
-        embed = discord.Embed(title="Rank Coin Symbol", description=f'#{rank} {name} ({symbol})', color=0x00ff00)
-        embed.set_thumbnail(url=icon)
-        embed.add_field(name="Date", value=time, inline=True)
-        embed.add_field(name="Price", value=f'${price}', inline=True)
-        embed.add_field(name="Change (24 Hr)", value=f'${price_change}', inline=True)
-        embed.add_field(name="% Change (24 Hr)", value=f'{percent_change}%', inline=True)
-        await message.channel.send(embed=embed)
+            # price = round(float(cryptoinfo['price']), decimalcount)
+            # price_change = round(float(cryptoinfo['1d']['price_change']),decimalcount)
+            # percent_change = round(float(cryptoinfo['1d']['price_change_pct'])*100,2)
+            await message.channel.send(price)
+            # embed = discord.Embed(title="Rank Coin Symbol", description=f'#({symbol})', color=0x00ff00)
+            # embed.set_thumbnail(url=icon)
+            # embed.add_field(name="Date", value=time, inline=True)
+            # embed.add_field(name="Price", value=cryptoprice, inline=True)
+            # embed.add_field(name="Change (24 Hr)", value=f'${price_change}', inline=True)
+            # embed.add_field(name="% Change (24 Hr)", value=f'{percent_change}%', inline=True)
+            # await message.channel.send(embed=embed)
+        except:
+            await message.channel.send('You have entered an invalid ticker')
 
     #Lists the crypto currencies
     if '!listcrypto' in message.content:
