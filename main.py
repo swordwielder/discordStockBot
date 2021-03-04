@@ -23,7 +23,7 @@ from scotch import totalwinelink
 from Generate_Games import gambit
 from listcrypto import getTopCrypto
 from listcrypto import getCryptoPrice
-
+from poshedge import searchPosHedge
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
@@ -51,6 +51,13 @@ async def on_ready():
         print(f'Guild Members:\n - {members}')
         
 
+async def update_stats():
+    await client.wait_until_ready()
+    # global messages, joined
+
+    while not client.is_closed():
+        searchPosHedge()
+
 @client.event
 async def on_member_join(member):
     await member.create_dm()
@@ -75,6 +82,9 @@ async def on_message(message):
         embed = discord.Embed(title="Analysis Photo", description='Object Name with Percentage of Confidence',color=0x00ff00)
         embed.set_image(url=f'https://discordimage.s3.amazonaws.com/{rando_img_name}.jpg')
         await message.channel.send(embed=embed)
+
+    if '!test' in message.content:
+        await message.channel.send('@everyone new gambit backdoor hedge available!')
 
     if '!math' in message.content:
         channel = message.channel
@@ -231,10 +241,10 @@ async def on_message(message):
             json_data = json.loads(data)
             
             
-            price = (str('$'+next(item['price'][:-6] for item in json_data if item["currency"] == symbol)))
-            print(symbol)
-            print('the price is;')
-            print(price)
+            price = (str('$'+next(item['price'] for item in json_data if item["currency"] == symbol)))
+            # print(symbol)
+            # print('the price is;')
+            # print(price)
             # return price
             # cryptoprice = getCryptoPrice(symbol)
             # name = cryptoinfo['name']
@@ -308,7 +318,7 @@ async def on_message(message):
         embed.add_field(name="```!joke```", value='Tells a joke', inline=False)
         embed.add_field(name="```!weather```", value='Tells the 5 days forecast of NYC', inline=False)
         embed.add_field(name="```!listcrypto```", value='Lists the top 3 Crypto Currencies ', inline=False)
-        # embed.add_field(name="```!listcrypto [Number]```", value='Lists the top [Number] Crypto Currencies ', inline=False)
+        
         embed.add_field(name="```!games [game]```", value='Lists the upcoming matches (starcraft2,overwatch,pubg,dota2,etc.) ', inline=False)
         embed.add_field(name="```!awsloft```", value='Lists the schedule for AWS loft located in lower Manhattan ', inline=False)
         embed.add_field(name="```!recognize [Image Url]```", value='Uses Machine Learning to Detect Objects in Image', inline=False)
@@ -341,6 +351,9 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
 api_limit = ExpiringDict(max_len=100, max_age_seconds=60)
+
+# client.loop.create_task(update_stats())
+
 
 if __name__ == '__main__':
     client.run(TOKEN)

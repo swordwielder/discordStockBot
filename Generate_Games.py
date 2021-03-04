@@ -14,7 +14,7 @@ def gambit():
 	alllinks = ["https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/1068",
 	"https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/1070", "https://sports.intertops.eu/en/Bets/American-Football/NFL-Lines/1018",
 	"https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/1064", "https://sports.intertops.eu/en/Bets/Esports/40", 
-	"https://sports.intertops.eu/en/Bets/Tennis/26"]
+	"https://sports.intertops.eu/en/Bets/Tennis/26" , "https://sports.intertops.eu/en/Bets/Baseball/4"]
 	resp = requests.get('https://api.gambitprofit.com/gambit-plays?_sort=PlayDate:DESC')
 
 	json_resp = json.loads(resp.content)
