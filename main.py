@@ -1,3 +1,4 @@
+from asyncio.tasks import sleep
 import os
 import json, discord, asyncio, logging
 from dotenv import load_dotenv
@@ -24,6 +25,8 @@ from Generate_Games import gambit
 from listcrypto import getTopCrypto
 from listcrypto import getCryptoPrice
 from poshedge import searchPosHedge
+
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
@@ -54,9 +57,19 @@ async def on_ready():
 async def update_stats():
     await client.wait_until_ready()
     # global messages, joined
-
+    channelID=813816622988918815
+    # secondID = 797625408433553441
+    # print('is this working??')
+    # guildID = 797625407960514612
+    print(813816622988918815)
     while not client.is_closed():
-        searchPosHedge()
+        hedge = searchPosHedge()
+        channel = client.get_channel(channelID)
+        await channel.send(hedge)
+        # print('this is a test')
+        
+        
+        
 
 @client.event
 async def on_member_join(member):
@@ -352,7 +365,11 @@ async def on_message(message):
 
 api_limit = ExpiringDict(max_len=100, max_age_seconds=60)
 
-# client.loop.create_task(update_stats())
+# bot = client.Bot(command_prefix="$")
+
+# @bot.command()
+# async def info():
+client.loop.create_task(update_stats())
 
 
 if __name__ == '__main__':
