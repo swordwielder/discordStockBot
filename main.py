@@ -374,7 +374,7 @@ api_limit = ExpiringDict(max_len=100, max_age_seconds=60)
 
 # @bot.command()
 # async def info():
-client.loop.create_task(update_stats())
+# client.loop.create_task(update_stats())
 
 
 if __name__ == '__main__':

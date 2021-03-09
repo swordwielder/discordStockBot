@@ -1,41 +1,50 @@
-Elon; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Elon-at-Hofstra/1848188
-Wisconsin Milwaukee; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Wisconsin-Milwaukee-at-Cleveland-State/1848190
-Oral Roberts; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oral-Roberts-at-South-Dakota-State/1848192
-Rider; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Rider-at-Canisius/1848194
-Appalachian State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Appalachian-State-at-Georgia-State/1848195
-Mercer; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Mercer-at-NC-Greensboro/1848196
-St Marys CA; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/St-Marys-CA-at-Gonzaga/1848197
-Drexel; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Drexel-at-Northeastern/1848189
-Northern Kentucky; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Northern-Kentucky-at-Oakland/1848191
-North Dakota State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/North-Dakota-State-at-South-Dakota/1848193
-Elon; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Elon-at-Hofstra/1848188
-Wisconsin Milwaukee; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Wisconsin-Milwaukee-at-Cleveland-State/1848190
-Oral Roberts; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oral-Roberts-at-South-Dakota-State/1848192
-Rider; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Rider-at-Canisius/1848194
-Appalachian State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Appalachian-State-at-Georgia-State/1848195
-Mercer; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Mercer-at-NC-Greensboro/1848196
-St Marys CA; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/St-Marys-CA-at-Gonzaga/1848197
-Drexel; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Drexel-at-Northeastern/1848189
-Northern Kentucky; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Northern-Kentucky-at-Oakland/1848191
-North Dakota State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/North-Dakota-State-at-South-Dakota/1848193
-Vegas Golden Knights; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Vegas-Golden-Knights-at-Minnesota-Wild/1847894
-Ottawa Senators; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Ottawa-Senators-at-Edmonton-Oilers/1847895
-Arizona Coyotes; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Arizona-Coyotes-at-Colorado-Avalanche/1847896
-St Louis Blues; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/St-Louis-Blues-at-San-Jose-Sharks/1847899
-Montreal Canadiens; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Montreal-Canadiens-at-Vancouver-Canucks/1847897
-Los Angeles Kings; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Los-Angeles-Kings-at-Anaheim-Ducks/1847898
-Vegas Golden Knights; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Vegas-Golden-Knights-at-Minnesota-Wild/1847894
-Ottawa Senators; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Ottawa-Senators-at-Edmonton-Oilers/1847895
-Arizona Coyotes; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Arizona-Coyotes-at-Colorado-Avalanche/1847896
-St Louis Blues; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/St-Louis-Blues-at-San-Jose-Sharks/1847899
-Montreal Canadiens; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Montreal-Canadiens-at-Vancouver-Canucks/1847897
-Los Angeles Kings; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Los-Angeles-Kings-at-Anaheim-Ducks/1847898
-Miami Marlins; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Miami-Marlins-at-St-Louis-Cardinals/1847884
-New York Mets; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/New-York-Mets-at-Washington-Nationals/1847885
-Chicago White Sox; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Chicago-White-Sox-at-Los-Angeles-Dodgers/1847886
-Arizona Diamondbacks; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Arizona-Diamondbacks-at-San-Francisco-Giants/1847887
-Seattle Mariners; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Seattle-Mariners-at-Cleveland-Indians/1847888
-Oakland Athletics; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Oakland-Athletics-at-Kansas-City-Royals/1847889
-Texas Rangers; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Texas-Rangers-at-Chicago-Cubs/1847890
-Cincinnati Reds; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Cincinnati-Reds-at-Colorado-Rockies/1847891
-Los Angeles Angels; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Los-Angeles-Angels-at-Milwaukee-Brewers/1847892
+Miami-Florida; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Miami-Florida-at-Pittsburgh/1849415
+Boston College; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Boston-College-at-Duke/1849416
+Wake Forest; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Wake-Forest-at-Notre-Dame/1849417
+Elon; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Elon-at-Drexel/1849466
+Oakland; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oakland-at-Cleveland-State/1849467
+Mount St Marys; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Mount-St-Marys-at-Bryant/1849473
+Southern Miss; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Southern-Miss-at-Rice/1849468
+Oral Roberts; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oral-Roberts-at-North-Dakota-State/1849469
+BYU; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/BYU-at-Gonzaga/1849470
+Miami-Florida; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Miami-Florida-at-Pittsburgh/1849415
+Boston College; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Boston-College-at-Duke/1849416
+Wake Forest; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Wake-Forest-at-Notre-Dame/1849417
+Elon; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Elon-at-Drexel/1849466
+Oakland; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oakland-at-Cleveland-State/1849467
+Mount St Marys; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Mount-St-Marys-at-Bryant/1849473
+Southern Miss; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Southern-Miss-at-Rice/1849468
+Oral Roberts; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oral-Roberts-at-North-Dakota-State/1849469
+BYU; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/BYU-at-Gonzaga/1849470
+New York Rangers; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/New-York-Rangers-at-Pittsburgh-Penguins/1848982
+Buffalo Sabres; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Buffalo-Sabres-at-Philadelphia-Flyers/1848983
+Nashville Predators; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Nashville-Predators-at-Carolina-Hurricanes/1848984
+New Jersey Devils; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/New-Jersey-Devils-at-Washington-Capitals/1848985
+Boston Bruins; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Boston-Bruins-at-New-York-Islanders/1848986
+Florida Panthers; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Florida-Panthers-at-Columbus-Blue-Jackets/1848987
+Winnipeg Jets; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Winnipeg-Jets-at-Toronto-Maple-Leafs/1848988
+Tampa Bay Lightning; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Tampa-Bay-Lightning-at-Detroit-Red-Wings/1848989
+Chicago Blackhawks; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Chicago-Blackhawks-at-Dallas-Stars/1848990
+New York Rangers; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/New-York-Rangers-at-Pittsburgh-Penguins/1848982
+Buffalo Sabres; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Buffalo-Sabres-at-Philadelphia-Flyers/1848983
+Nashville Predators; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Nashville-Predators-at-Carolina-Hurricanes/1848984
+New Jersey Devils; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/New-Jersey-Devils-at-Washington-Capitals/1848985
+Boston Bruins; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Boston-Bruins-at-New-York-Islanders/1848986
+Florida Panthers; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Florida-Panthers-at-Columbus-Blue-Jackets/1848987
+Winnipeg Jets; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Winnipeg-Jets-at-Toronto-Maple-Leafs/1848988
+Tampa Bay Lightning; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Tampa-Bay-Lightning-at-Detroit-Red-Wings/1848989
+Chicago Blackhawks; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Chicago-Blackhawks-at-Dallas-Stars/1848990
+Pittsburgh Pirates; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Pittsburgh-Pirates-at-Atlanta-Braves/1848992
+New York Yankees; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/New-York-Yankees-at-Detroit-Tigers/1848993
+Baltimore Orioles; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Baltimore-Orioles-at-Minnesota-Twins/1848994
+Boston Red Sox; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Boston-Red-Sox-at-Tampa-Bay-Rays/1848995
+Philadelphia Phillies; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Philadelphia-Phillies-at-Toronto-Blue-Jays/1848996
+St Louis Cardinals; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/St-Louis-Cardinals-at-New-York-Mets/1848997
+Oakland Athletics; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Oakland-Athletics-at-Chicago-Cubs/1848998
+San Diego Padres; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/San-Diego-Padres-at-Chicago-White-Sox/1848999
+Cleveland Indians; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Cleveland-Indians-at-Texas-Rangers/1849000
+Colorado Rockies; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Colorado-Rockies-at-Arizona-Diamondbacks/1849001
+San Francisco Giants; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/San-Francisco-Giants-at-Milwaukee-Brewers/1849002
+Kansas City Royals; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Kansas-City-Royals-at-Seattle-Mariners/1849003
+Washington Nationals; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Washington-Nationals-at-Houston-Astros/1849004
+Los Angeles Dodgers; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Los-Angeles-Dodgers-at-Cincinnati-Reds/1849005
