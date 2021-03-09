@@ -2,7 +2,7 @@ import requests
 import time
 from bs4 import BeautifulSoup
 
-current=0
+
 
 def searchPosHedge(current):
     url = 'https://gambitdataanalytics.web.app/'
@@ -37,8 +37,11 @@ def searchPosHedge(current):
     # print('Is this working')
     # time.sleep(5.0)
     # print('this is sleeping for 2.5')
-    print('the hedge found is the same as the current hedge')
-    return current
+    a=[]
+    a.append(current)
+    a.append('the hedge found is the same as the current hedge')
+    # print()
+    return a
 
 # while True:
 #     print(searchPosHedge(current))

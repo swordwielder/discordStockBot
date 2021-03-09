@@ -27,6 +27,7 @@ from listcrypto import getCryptoPrice
 from poshedge import searchPosHedge
 
 
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
@@ -62,10 +63,14 @@ async def update_stats():
     # print('is this working??')
     # guildID = 797625407960514612
     print(813816622988918815)
-    while not client.is_closed():
-        hedge = searchPosHedge()
+    current=0
+    # while not client.is_closed():
+    hedge = searchPosHedge(current)
+    if type(hedge) != list:
+        current = hedge
         channel = client.get_channel(channelID)
         await channel.send(hedge)
+    time.sleep(2.5)
         # print('this is a test')
         
         
