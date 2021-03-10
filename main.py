@@ -64,13 +64,14 @@ async def update_stats():
     # guildID = 797625407960514612
     print(813816622988918815)
     current=0
-    # while not client.is_closed():
-    hedge = searchPosHedge(current)
-    if type(hedge) != list:
-        current = hedge
-        channel = client.get_channel(channelID)
-        await channel.send(hedge)
-    time.sleep(2.5)
+    while not client.is_closed():
+        hedge = searchPosHedge(current)
+        if type(hedge) == float:
+            current = hedge
+            channel = client.get_channel(channelID)
+            await channel.send('everyone https://gambitdataanalytics.web.app/')
+            await channel.send(f'{hedge}%')
+        time.sleep(2.5)
         # print('this is a test')
         
         
@@ -374,7 +375,7 @@ api_limit = ExpiringDict(max_len=100, max_age_seconds=60)
 
 # @bot.command()
 # async def info():
-# client.loop.create_task(update_stats())
+client.loop.create_task(update_stats())
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 import requests
 import time
 from bs4 import BeautifulSoup
-
+from datetime import datetime
 
 
 def searchPosHedge(current):
@@ -11,8 +11,9 @@ def searchPosHedge(current):
     divs = soup.findAll("td")
     a = str(divs[5])
     # print(type(a))
-    comparison = float((a[4:10]))
+    comparison = float((a[4:9]))
     tds=[]
+    print(datetime.now())
     print('the comparison value')
     print(comparison)
     print('current before comparison')
