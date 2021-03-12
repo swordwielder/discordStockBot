@@ -69,8 +69,7 @@ async def update_stats():
         if type(hedge) == float:
             current = hedge
             channel = client.get_channel(channelID)
-            await channel.send('everyone https://gambitdataanalytics.web.app/')
-            await channel.send(f'{hedge}%')
+            await channel.send(f'@everyone {hedge}% hedge available https://gambitdataanalytics.web.app/')
         time.sleep(2.5)
         # print('this is a test')
         
@@ -371,11 +370,30 @@ async def on_message(message):
 
 api_limit = ExpiringDict(max_len=100, max_age_seconds=60)
 
-# bot = client.Bot(command_prefix="$")
+async def degen():
+    await client.wait_until_ready()
+    # global messages, joined
+    # channelID=813816622988918815
+    secondID = 797625408433553441
+    # print('is this working??')
+    # guildID = 797625407960514612
+    print(813816622988918815)
+    current=0
+    while not client.is_closed():
+        # hedge = searchPosHedge(current)
+        # if type(hedge) == float:
+        #     current = hedge
+        channel = client.get_channel(secondID)
+        await channel.send('grinder is the biggest degen in existence.')
+        time.sleep(5.5)
+        # print('this is a test')
 
+
+# bot = client.Bot(command_prefix="$")
+# client.loop.create_task(degen())
 # @bot.command()
 # async def info():
-client.loop.create_task(update_stats())
+# client.loop.create_task(update_stats())
 
 
 if __name__ == '__main__':

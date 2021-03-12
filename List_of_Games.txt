@@ -1,33 +1,37 @@
-Sacramento State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Sacramento-State-at-Northern-Colorado/1850212
-NC State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/NC-State-at-Syracuse/1850215
-Northern Arizona; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Northern-Arizona-at-Portland-State/1850213
-San Jose State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/San-Jose-State-at-Wyoming/1850221
-Miami-Florida; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Miami-Florida-at-Clemson/1850216
-Marquette; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Marquette-at-Georgetown/1850224
-Washington State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Washington-State-at-Arizona-State/1850228
-Air Force; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Air-Force-at-UNLV/1850222
-Idaho; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Idaho-at-Montana/1850214
-Loyola Maryland; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Loyola-Maryland-at-Army/1850242
-Butler; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Butler-at-Xavier/1850226
-SE Louisiana; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/SE-Louisiana-at-New-Orleans/1850244
-Duke; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Duke-at-Louisville/1850217
-Minnesota; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Minnesota-at-Northwestern/1850231
-Charlotte; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Charlotte-at-Texas-San-Antonio/1850233
-Kansas State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Kansas-State-at-TCU/1850237
-New Mexico; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/New-Mexico-at-Fresno-State/1850223
-Washington; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Washington-at-Utah/1850229
-Rice; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Rice-at-Marshall/1850234
-Texas A&M; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Texas-A-M-at-Vanderbilt/1850239
-Bucknell; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Bucknell-at-Colgate/1850243
-Notre Dame; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Notre-Dame-at-North-Carolina/1850218
-DePaul; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/DePaul-at-Providence/1850227
-Nebraska; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Nebraska-at-Penn-State/1850232
-Iowa State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Iowa-State-at-Oklahoma/1850238
-California; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/California-at-Stanford/1850230
-Washington Wizards; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Washington-Wizards-at-Memphis-Grizzlies/1847901
-San Antonio Spurs; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/San-Antonio-Spurs-at-Dallas-Mavericks/1847902
-Vegas Golden Knights; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Vegas-Golden-Knights-at-Minnesota-Wild/1850246
-Ottawa Senators; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Ottawa-Senators-at-Edmonton-Oilers/1850247
-Arizona Coyotes; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Arizona-Coyotes-at-Colorado-Avalanche/1850248
-Los Angeles Kings; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Los-Angeles-Kings-at-Anaheim-Ducks/1850249
-Montreal Canadiens; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Montreal-Canadiens-at-Vancouver-Canucks/1850250
+Indiana; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Indiana-at-Rutgers/1851521
+Oklahoma; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Oklahoma-at-Kansas/1851544
+Texas-San Antonio; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Texas-San-Antonio-at-Western-Kentucky/1851644
+Bowling Green; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Bowling-Green-at-Akron/1851518
+Georgia; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Georgia-at-Missouri/1851540
+Rice; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Rice-at-UAB/1851645
+North Carolina; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/North-Carolina-at-Virginia-Tech/1851529
+Utah; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Utah-at-USC/1851594
+Penn State; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Penn-State-at-Wisconsin/1851525
+DePaul; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/DePaul-at-Connecticut/1851536
+South Carolina; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/South-Carolina-at-Mississippi/1851541
+Texas Tech; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Texas-Tech-at-Texas/1851545
+Florida Atlantic; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/Florida-Atlantic-at-Louisiana-Tech/1851646
+North Texas; https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/North-Texas-at-Old-Dominion/1851647
+Detroit Pistons; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Detroit-Pistons-at-Charlotte-Hornets/1851400
+Boston Celtics; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Boston-Celtics-at-Brooklyn-Nets/1851401
+Atlanta Hawks; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Atlanta-Hawks-at-Toronto-Raptors/1851402
+Orlando Magic; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Orlando-Magic-at-Miami-Heat/1851403
+Philadelphia 76ers; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Philadelphia-76ers-at-Chicago-Bulls/1851404
+Minnesota Timberwolves; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Minnesota-Timberwolves-at-New-Orleans-Pelicans/1851405
+New York Knicks; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/New-York-Knicks-at-Milwaukee-Bucks/1851406
+Dallas Mavericks; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Dallas-Mavericks-at-Oklahoma-City-Thunder/1851407
+Golden State Warriors; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Golden-State-Warriors-at-Los-Angeles-Clippers/1851408
+Houston Rockets; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Houston-Rockets-at-Sacramento-Kings/1851409
+Phoenix Suns; https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/Phoenix-Suns-at-Portland-Trail-Blazers/1851410
+Washington Capitals; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Washington-Capitals-at-Philadelphia-Flyers/1851411
+Florida Panthers; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Florida-Panthers-at-Columbus-Blue-Jackets/1851412
+Winnipeg Jets; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Winnipeg-Jets-at-Toronto-Maple-Leafs/1851413
+Nashville Predators; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Nashville-Predators-at-Carolina-Hurricanes/1851414
+New Jersey Devils; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/New-Jersey-Devils-at-New-York-Islanders/1851415
+Pittsburgh Penguins; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Pittsburgh-Penguins-at-Buffalo-Sabres/1851416
+New York Rangers; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/New-York-Rangers-at-Boston-Bruins/1851417
+Tampa Bay Lightning; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Tampa-Bay-Lightning-at-Detroit-Red-Wings/1851418
+Chicago Blackhawks; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Chicago-Blackhawks-at-Dallas-Stars/1851419
+Montreal Canadiens; https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/Montreal-Canadiens-at-Calgary-Flames/1851420
+Seattle Mariners; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Seattle-Mariners-at-Los-Angeles-Dodgers/1851434
+Chicago White Sox; https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/Chicago-White-Sox-at-Cincinnati-Reds/1851435
