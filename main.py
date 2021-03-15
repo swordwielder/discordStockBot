@@ -25,7 +25,8 @@ from Generate_Games import gambit
 from listcrypto import getTopCrypto
 from listcrypto import getCryptoPrice
 from poshedge import searchPosHedge
-
+from wayfaster import gambitsearch
+import wayfaster
 
 
 load_dotenv()
@@ -137,7 +138,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if '!gambit' in message.content:
-        gambitGames = gambit()
+        gambitGames = gambitsearch()
         # embed = discord.Embed(title="Games today", description='Here are the Games today on Gambit', color=0x00ff00)
         # await message.channel.send(embed=embed)
         for i in gambitGames:
