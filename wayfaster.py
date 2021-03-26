@@ -12,7 +12,8 @@ import threading
 # For sports, if you want to add another category, all you need to is add the link to the list
 alllinks = ["https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Lines/1068",
 "https://sports.intertops.eu/en/Bets/Basketball/NBA-Lines/1070", "https://sports.intertops.eu/en/Bets/American-Football/NFL-Lines/1018",
-"https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/1064", "https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/1114"]
+"https://sports.intertops.eu/en/Bets/Ice-Hockey/NHL-Lines/1064", "https://sports.intertops.eu/en/Bets/Baseball/MLB-Spring-Training/1114", 
+"https://sports.intertops.eu/en/Bets/Basketball/NIT-Tournament/1116", "https://sports.intertops.eu/en/Bets/Basketball/NCAAB-Tournament/1115"]
 
 #Initialize some indices of the list so we can modify based on specification later on
 allrequests = ['hehexd'] * len(alllinks)
