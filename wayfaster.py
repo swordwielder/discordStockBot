@@ -73,9 +73,12 @@ def gambitsearch():
 		for link in links:
 			# print(link)
 			# Search to see if the game is on Gambit before adding it to the txt
-			if link.b.div.string in gambitGames:
-				fullLink = link.b.div.string + "; " + "https://sports.intertops.eu" + link.attrs['href']
-				rawList.append(fullLink)
+			# print(type(link.b.div))
+			# print(link.b.div)
+			if link.b.div is not None:
+				if link.b.div.string in gambitGames:
+					fullLink = link.b.div.string + "; " + "https://sports.intertops.eu" + link.attrs['href']
+					rawList.append(fullLink)
 
 	# Remove the dupes
 	lines_seen = set() # holds lines already seen
