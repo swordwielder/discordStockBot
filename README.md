@@ -45,6 +45,16 @@ This is a discord bot that gives real live data of
 
 To invite the bot to your discord server, click on this [link](https://discordapp.com/api/oauth2/authorize?client_id=623200683964891136&permissions=0&scope=bot)
 
+## Technologies utilized:
+
+* Python
+
+* Selenium
+
+* APIs
+
+* Speech Recognition 
+
 ## Run the bot:
 * ```python main.py``` - Will run the bot locally, to run it permanently, you can use AWS EC2 or other server. 
 
