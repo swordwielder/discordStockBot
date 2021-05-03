@@ -44,7 +44,7 @@ def discordlogger():
     print(logger)
 
 
-
+#get the bot ready
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
@@ -56,6 +56,7 @@ async def on_ready():
         print(f'Guild Members:\n - {members}')
         
 
+#method to always run all the time, this was to check a website constantly for positive hedge
 async def update_stats():
     await client.wait_until_ready()
     # global messages, joined
@@ -76,7 +77,7 @@ async def update_stats():
         
         
         
-
+#display a message when someone joins
 @client.event
 async def on_member_join(member):
     await member.create_dm()
@@ -84,12 +85,15 @@ async def on_member_join(member):
         f'Hi {member.name}, StockBot has been waiting for you!'
     )
 
+    
+#check for input command
 @client.event
 async def on_message(message):
 
     if message.author == client.user:
         return
-
+    
+    #method for recognize an image for photo recognition
     if '!recognize' in message.content:
         # use regex to parse the url from the command
         url = re.search("(?P<url>https?://[^\s]+)", message.content).group("url")
@@ -102,9 +106,11 @@ async def on_message(message):
         embed.set_image(url=f'https://discordimage.s3.amazonaws.com/{rando_img_name}.jpg')
         await message.channel.send(embed=embed)
 
+       
     if '!test' in message.content:
         await message.channel.send('@everyone new gambit backdoor hedge available!')
 
+    #method to do simple math functions
     if '!math' in message.content:
         channel = message.channel
         equation = message.content.replace(' ','')[5:]
@@ -116,12 +122,13 @@ async def on_message(message):
         await channel.send(eval(equation))
         # await channel.send(calculate())
 
-
+    #repeat what you want the bot to say ( only work through your mic)
     if '!repeat' in message.content:
         channel = message.channel
         await channel.send('Please say the message you want the bot to repeat!')
         await channel.send(repeat())
 
+    #scrapes the liquipedia website and display their schedule
     if '!games' in message.content:
         esport = message.content.split(' ')[1]
         try:
@@ -137,6 +144,7 @@ async def on_message(message):
 
         await message.channel.send(embed=embed)
 
+    #scrapes the intertops website for the list of games that is available on gambit
     if '!gambit' in message.content:
         gambitGames = gambitsearch()
         # embed = discord.Embed(title="Games today", description='Here are the Games today on Gambit', color=0x00ff00)
@@ -145,6 +153,7 @@ async def on_message(message):
             await message.channel.send(i)
         # await message.channel.send(embed=embed)
 
+    #checks the jokes data base and display new jokes
     if '!joke' in message.content:
         joke=get_joke()
         await message.channel.send(f'If you insist {str(message.author)[:-5]}... :smirk: \n{joke}  \n\n give me a 👍 or 👎 to let me know how I did')
@@ -165,6 +174,7 @@ async def on_message(message):
             elif reaction.emoji== '👎':
                 await message.channel.send(':weary: I got this next time! ')
 
+    #scrapes the total wine website and gets their price and name, rating and quantity
     if '!wine' in message.content:
         
         channel = message.channel
@@ -187,6 +197,7 @@ async def on_message(message):
         else:
             await message.channel.send('No Result Found!')
 
+     #checks the aws loft website for their schedule
     if '!awsloft' in message.content:
         channel = message.channel
         upcoming_schedule = getAWS()
@@ -214,7 +225,7 @@ async def on_message(message):
         else:
             await channel.send('No Schedule found!')
         
-
+     #displays the price of a stock based on a ticker
     if '$findstock' in message.content:
         # Remove whitespaces from input for exception handling
         ticker = message.content.replace(' ','')[10:]
@@ -248,7 +259,9 @@ async def on_message(message):
         else:
             print(api_limit,'Failed')
             await message.channel.send('Too Many Calls Please Wait')
-
+                            
+                            
+    #display the price of a crypto based on crypto symbol
     if '$findcrypto' in message.content:
         cryptosymbol = message.content.replace(' ', '')[11:]
         symbol = cryptosymbol.upper()
@@ -349,6 +362,7 @@ async def on_message(message):
         embed.add_field(name="```note from devs```", value='currently making a better discord checkout: https://anychatio.herokuapp.com/ for early access, for questions and concerns, email anychatio@gmail.com', inline=False)
         await message.channel.send(embed=embed)
 
+    #check and display the weather of NYC based on the dark sky api
     if message.content=='!weather':
         weather = weatherdata()
         # for each in weather:
